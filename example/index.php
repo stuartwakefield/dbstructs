@@ -10,11 +10,11 @@ $password = "YUM!3m0nad3";
 $db = new PDO("mysql:dbname=$dbname;host=$host", $username, $password);
 
 /* This needs to work from views */
-require_once "/../framework/PhprmMapper.php";
+require_once "/../DBStructs.php";
 
 $start = time();
 
-$mapper = new PhprmMapper($db, array(
+$mapper = new DBStructs($db, array(
 	array(
 		"name" => "/product",
 		"table" => "products",
